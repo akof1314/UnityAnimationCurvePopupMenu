@@ -67,6 +67,6 @@ public class AnimationCurveGUI
         label = EditorGUI.BeginProperty(position, label, property);
         EditorGUI.CurveField(EditorGUI.PrefixLabel(SubtractPopupWidth(position), label), property, Color.green, default(Rect));
         AnimationCurvePopupMenu.Show(GetPopupRect(position), null, property);
-		EditorGUI.EndProperty();
+        EditorGUI.EndProperty();
     }
 }
