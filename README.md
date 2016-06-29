@@ -11,23 +11,28 @@ Unity 曲线编辑扩展菜单功能
 
 # 截图
 点击右侧下拉按钮，点击 Copy 复制：
+
 ![](https://github.com/akof1314/UnityAnimationCurvePopupMenu/raw/master/Screenshots/screenshot_copy.png)
+
 在另一个曲线，右侧菜单点击 Paste 粘贴：
-![](https://github.com/akof1314/UnityAnimationCurvePopupMenu/raw/master/Screenshots/screenshot_copy.png)
+
+![](https://github.com/akof1314/UnityAnimationCurvePopupMenu/raw/master/Screenshots/screenshot_paste.png)
+
 清空曲线的关键帧值，点击 Clear 清空：
+
 ![](https://github.com/akof1314/UnityAnimationCurvePopupMenu/raw/master/Screenshots/screenshot_clear.png)
 
 # 使用说明
 代码放进工程里面，对于默认的脚本，会自动调用扩展的曲线绘制方式：
 默认的脚本类似：
-```
+```csharp
 public class TestCurve : MonoBehaviour
 {
     public AnimationCurve curve;
 }
 ```
 高级方式，要对默认脚本进行自定义绘制的话，创建 Editor 类。接着，对于属性值，调用 Unity 自带的接口 `EditorGUILayout.PropertyField` 即可。对于非属性值，可通过 AnimationCurveGUI 接口来替换 EditorGUILayout 和 EditorGUI 来绘制曲线：
-```
+```csharp
 using UnityEngine;
 using UnityEditor;
 
